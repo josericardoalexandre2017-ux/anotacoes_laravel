@@ -1,16 +1,51 @@
-# eduteka-annotation
-Simulando um serviço de anotações com Laravel(PHP). Link da série de vídeos completa: https://youtu.be/8k5Rn2DF_Xw
+============================
+        NOTES APP
+============================
+
+Aplicacao de anotacoes desenvolvida com Laravel (PHP),
+simulando um servico completo de criacao e gerenciamento de notas.
 
 
-Lembre-se de rodar os seguintes comandos para testar o projetinho:
-- composer install (Instalar bibliotecas de terceiros)
-- php artisan migrate (Criar migrations)
-- php artisan db:seed (Popular migrations com as seeders)
-- php artisan serve (Rodar a aplicação laravel)
-- php artisan icons:cache (Faz o cache dos ícones utilizados no projeto, é extremamente importante rodar esse comando para melhorar a perfomance)
+==============================
+  COMO RODAR O PROJETO
+==============================
 
-- Criar arquivo .env (utilizar o env.example como base)
-- Se necessário criar chave da aplicação: php artisan key:generate
-- php artisan optimize (opcionalmente)
+1. Instale as dependencias:
+   composer install
 
-Obs: Se vocês adicionarem novos ícones na aplicação, seria necessário limpar e refazer o cache dos ícones. Para limpar o comando é esse: php artisan icons:clear
+2. Configure o ambiente:
+   - Copie o arquivo .env.example e renomeie para .env
+   - Ajuste as variaveis de ambiente conforme necessario
+
+3. Gere a chave da aplicacao:
+   php artisan key:generate
+
+4. Crie e popule o banco de dados:
+   php artisan migrate
+   php artisan db:seed
+
+5. Faca o cache dos icones (obrigatorio):
+   php artisan icons:cache
+
+6. Rode a aplicacao:
+   php artisan serve
+
+
+==============================
+  COMANDOS UTEIS
+==============================
+
+php artisan optimize      -> Otimiza a aplicacao (opcional)
+php artisan icons:clear   -> Limpa o cache dos icones
+php artisan icons:cache   -> Refaz o cache dos icones
+
+
+==============================
+  OBSERVACAO
+==============================
+
+Sempre que adicionar novos icones na aplicacao,
+rode os seguintes comandos na ordem:
+
+   php artisan icons:clear
+   php artisan icons:cache
